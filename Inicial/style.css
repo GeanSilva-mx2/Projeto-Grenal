@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    border-radius: 10px;
+    text-align: center;
+    background: linear-gradient(to right, #002b5b 0%, #000000 50%, #5b0000 100%);
+    color: white;
+    padding: 50px 20px;
+    margin: 20px;
+}
+
+header h1 {
+    font-size: 4em;
+}
+
+header h3 {
+    margin-top: 10px;
+}
+
+.divLogo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+}
+
+
+.rs-cores {
+    background: linear-gradient(
+        to right,
+        #006400,  /* verde */
+        #8b0000,  /* vermelho */
+        #ffd700   /* amarelo */
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: moverRS 4s linear infinite;
+
+    font-weight: bold;
+}
+
+
+nav {
+    text-align: center;
+    color: white;
+    background: #08080d;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.botao-menu {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #08080d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.botao-menu:hover {
+    color: #00aaff;
+}
+
+nav a:hover {
+    background: linear-gradient(to right, blue 50%, red 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+main {
+    flex: 1;
+}
+
+/* SEÇÃO CLUBES */
+#secao-clubes {
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin: 20px;
+    background: linear-gradient(to right, #002b5b 0%, #000000 50%, #5b0000 100%);
+}
+
+.container-clubes {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* CARDS */
+.card-clube {
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-clube:hover {
+    transform: translateY(-8px);
+}
+
+.card-gremio {
+    background: linear-gradient(160deg, #0a1628, #0d2240);
+    border: 1px solid rgba(0, 104, 180, 0.3);
+}
+
+.card-gremio:hover {
+    box-shadow: 0 0 25px rgba(0, 104, 180, 0.35);
+}
+
+.card-inter {
+    background: linear-gradient(160deg, #1a0a0a, #2a0e0e);
+    border: 1px solid rgba(200, 0, 0, 0.3);
+}
+
+.card-inter:hover {
+    box-shadow: 0 0 25px rgba(200, 0, 0, 0.35);
+}
+
+.efeito-brilho {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    opacity: 0.1;
+    filter: blur(60px);
+}
+
+.azul {
+    background: rgba(0, 104, 180, 0.2);
+}
+
+.vermelho {
+    background: rgba(200, 0, 0, 0.2);
+}
+
+.conteudo-card {
+    position: relative;
+    z-index: 10;
+}
+
+.cabecalho-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.logo-clube {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo-gremio {
+    background: #0068b4;
+}
+
+.logo-inter {
+    background: #e01e1e;
+}
+
+.titulo-clube {
+    font-size: 28px;
+}
+
+.fundacao {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.descricao-clube {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.lista-titulos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge-titulo {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.rodape-clube {
+    margin-top: 15px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.azul-texto {
+    color: #4db8ff;
+}
+
+.vermelho-texto {
+    color: #ff6b6b;
+}
+
+.azul-suave {
+    color: #607090;
+}
+
+.vermelho-suave {
+    color: #906060;
+}
+
+.azul-texto-claro {
+    color: #8899aa;
+}
+
+.vermelho-texto-claro {
+    color: #aa8888;
+}
+
+.azul-rodape {
+    color: #506880;
+}
+
+.vermelho-rodape {
+    color: #805060;
+}
+
+/* SEÇÃO HISTÓRIA */
+#secao-historia {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 20px;
+}
+
+#secao-historia::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        #006400 0%,
+        #1f5f1f 25%,
+        #8b0000 50%,
+        #b22222 75%,
+        #ffd700 100%
+    );
+    opacity: 0.18;
+    z-index: 1;
+}
+
+.overlay-historia {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.15), transparent 60%);
+    z-index: 2;
+    animation: moverLuz 8s ease-in-out infinite alternate;
+}
+
+.container-historia {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    margin: auto;
+}
+
+.titulo-historia {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #0068b4, #ffffff, #e01e1e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.texto-historia {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #f1f1f1;
+}
+
+.destaque-historia {
+    margin-top: 30px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.35);
+    font-style: italic;
+    color: #ffffff;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px;
+    background: #08080d;
+    color: #ffffff;
+}
+
+/* ANIMAÇÃO */
+@keyframes moverLuz {
+    0% {
+        transform: translateX(0px) translateY(0px) scale(1);
+    }
+    100% {
+        transform: translateX(20px) translateY(-10px) scale(1.05);
+    }
+}
+
+@keyframes moverRS {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header h2 {
+        font-size: 1em;
+    }
+
+    .card-clube {
+        padding: 20px;
+    }
+
+    .titulo-clube {
+        font-size: 22px;
+    }
+
+    .titulo-historia {
+        font-size: 2em;
+    }
+
+    .texto-historia {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: #2d0a0a;
+    color: white;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #b40000, #000);
+}
+
+nav {
+    text-align: center;
+    color: white;
+    background: rgba(180, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.botao-menu {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.botao-menu:hover {
+    color: #ff0000;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    color: #e01e1e;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2d0a0a;
+    margin-top: 40px;
+}
