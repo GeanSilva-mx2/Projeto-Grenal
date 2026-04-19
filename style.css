@@ -315,11 +315,8 @@ main {
 
 .titulo-historia {
     font-size: 2.5em;
+    color: white;
     margin-bottom: 30px;
-    background: linear-gradient(to right, #0068b4, #ffffff, #e01e1e);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .texto-historia {
@@ -384,7 +381,6 @@ main {
     .titulo-historia {
         font-size: 2em;
     }
-
     .texto-historia {
         font-size: 1em;
     }
