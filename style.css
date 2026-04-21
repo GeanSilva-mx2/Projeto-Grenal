@@ -100,7 +100,26 @@ section {
         -8px 0 25px rgba(0, 104, 180, 0.18),
          8px 0 25px rgba(224, 30, 30, 0.18),
          0 8px 22px rgba(0, 0, 0, 0.35);
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px 24px;
+    flex-wrap: wrap;
+}
+
+.menu-esquerda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-direita {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .botao-menu {
@@ -137,6 +156,26 @@ section {
 
 .botao-menu:hover::after {
     width: 100%;
+}
+
+.botao-acesso {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.botao-acesso:hover {
+    background: linear-gradient(to right, rgba(0, 104, 180, 0.25), rgba(224, 30, 30, 0.25));
+}
+
+.botao-acesso.cadastrar {
+    background: linear-gradient(to right, rgba(0, 104, 180, 0.2), rgba(224, 30, 30, 0.2));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.botao-acesso.cadastrar:hover {
+    background: linear-gradient(to right, #0068b4, #e01e1e);
 }
 
 /* MAIN */
@@ -528,6 +567,13 @@ main {
 @media (max-width: 900px) {
     .menu {
         padding: 15px 16px;
+        justify-content: center;
+    }
+
+    .menu-esquerda,
+    .menu-direita {
+        justify-content: center;
+        width: 100%;
     }
 
     .botao-menu {
@@ -598,6 +644,11 @@ main {
 @media (max-width: 560px) {
     .menu {
         padding: 12px;
+    }
+
+    .menu-direita {
+        flex-direction: column;
+        gap: 6px;
     }
 
     .botao-menu {
