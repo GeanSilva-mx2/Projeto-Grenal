@@ -14,5 +14,19 @@ function atualizarDataHora() {
         agora.toLocaleDateString("pt-BR", opcoes);
 }
 
-setInterval(atualizarDataHora, 1000);
-atualizarDataHora();
+const track = document.querySelector(".carrossel-track");
+const slides = document.querySelectorAll(".slide");
+
+let index = 0;
+
+function trocarSlide() {
+    index++;
+    if (index >= slides.length) {
+        index = 0;
+    }
+
+    track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// troca sozinho a cada 10 segundos
+setInterval(trocarSlide, 10000);
