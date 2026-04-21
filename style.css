@@ -43,6 +43,12 @@ header h3 {
 .vs {
     font-size: 2.2em;
     text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+    display: inline-block; /* importante para aplicar transform */
+    transition: transform 0.3s ease;
+}
+
+.vs:hover {
+    transform: translateY(-10px);
 }
 
 .divLogo {
